@@ -1,1 +1,6 @@
 .Rproj.user
+.bash_logout
+.bashrc
+.config/
+.profile
+.local/
