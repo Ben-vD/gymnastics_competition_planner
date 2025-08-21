@@ -3,7 +3,7 @@
     "Version": "4.4.3",
     "Repositories": [
       {
-        "Name": "CRAN",
+        "Name": "cran",
         "URL": "https://packagemanager.posit.co/cran/2025-08-11"
       }
     ]
@@ -4385,6 +4385,101 @@
       "NeedsCompilation": "no",
       "Author": "Winston Chang [aut, cre] (ORCID: <https://orcid.org/0000-0002-1576-2126>), Joe Cheng [aut], JJ Allaire [aut], Carson Sievert [aut] (ORCID: <https://orcid.org/0000-0002-4958-2844>), Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>), Yihui Xie [aut], Jeff Allen [aut], Jonathan McPherson [aut], Alan Dipert [aut], Barbara Borges [aut], Posit Software, PBC [cph, fnd], jQuery Foundation [cph] (jQuery library and jQuery UI library), jQuery contributors [ctb, cph] (jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt), jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in inst/www/shared/jqueryui/AUTHORS.txt), Mark Otto [ctb] (Bootstrap library), Jacob Thornton [ctb] (Bootstrap library), Bootstrap contributors [ctb] (Bootstrap library), Twitter, Inc [cph] (Bootstrap library), Prem Nawaz Khan [ctb] (Bootstrap accessibility plugin), Victor Tsaran [ctb] (Bootstrap accessibility plugin), Dennis Lembree [ctb] (Bootstrap accessibility plugin), Srinivasu Chakravarthula [ctb] (Bootstrap accessibility plugin), Cathy O'Connor [ctb] (Bootstrap accessibility plugin), PayPal, Inc [cph] (Bootstrap accessibility plugin), Stefan Petre [ctb, cph] (Bootstrap-datepicker library), Andrew Rowls [ctb, cph] (Bootstrap-datepicker library), Brian Reavis [ctb, cph] (selectize.js library), Salmen Bejaoui [ctb, cph] (selectize-plugin-a11y library), Denis Ineshin [ctb, cph] (ion.rangeSlider library), Sami Samhuri [ctb, cph] (Javascript strftime library), SpryMedia Limited [ctb, cph] (DataTables library), John Fraser [ctb, cph] (showdown.js library), John Gruber [ctb, cph] (showdown.js library), Ivan Sagalaev [ctb, cph] (highlight.js library), R Core Team [ctb, cph] (tar implementation from R)",
       "Maintainer": "Winston Chang <winston@posit.co>",
+      "Repository": "RSPM"
+    },
+    "shiny.fluent": {
+      "Package": "shiny.fluent",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Title": "Microsoft Fluent UI for Shiny Apps",
+      "Authors@R": "c( person(\"Jakub\", \"Sobolewski\", role = c(\"aut\", \"cre\"), email = \"opensource+jakub.sobolewski@appsilon.com\"), person(\"Kamil\", \"Żyła\", role = \"aut\", email = \"kamil@appsilon.com\"), person(\"Marek\", \"Rogala\", role = \"aut\", email = \"marek@appsilon.com\"), person(\"Appsilon Sp. z o.o.\", role = \"cph\", email = \"opensource@appsilon.com\") )",
+      "Description": "A rich set of UI components for building Shiny applications, including inputs, containers, overlays, menus, and various utilities. All components from Fluent UI (the underlying JavaScript library) are available and have usage examples in R.",
+      "URL": "https://appsilon.github.io/shiny.fluent/, https://github.com/appsilon/shiny.fluent",
+      "License": "LGPL-3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.3.1",
+      "Depends": [
+        "R (>= 2.10)"
+      ],
+      "Imports": [
+        "htmltools",
+        "jsonlite",
+        "purrr",
+        "shiny",
+        "shiny.react (>= 0.4.0)"
+      ],
+      "Suggests": [
+        "chromote",
+        "covr",
+        "dplyr",
+        "DT",
+        "ggplot2",
+        "glue",
+        "imola",
+        "knitr",
+        "leaflet",
+        "mockery",
+        "plotly",
+        "rcmdcheck",
+        "RColorBrewer",
+        "rmarkdown",
+        "sass",
+        "shiny.i18n (>= 0.3.0)",
+        "shiny.router (>= 0.3.1)",
+        "shinyjs",
+        "shinytest2",
+        "sortable",
+        "stringi",
+        "testthat (>= 3.0.0)",
+        "tibble",
+        "withr"
+      ],
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "no",
+      "Author": "Jakub Sobolewski [aut, cre], Kamil Żyła [aut], Marek Rogala [aut], Appsilon Sp. z o.o. [cph]",
+      "Maintainer": "Jakub Sobolewski <opensource+jakub.sobolewski@appsilon.com>",
+      "Repository": "RSPM"
+    },
+    "shiny.react": {
+      "Package": "shiny.react",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Title": "Tools for Using React in Shiny",
+      "Authors@R": "c( person(\"Jakub\", \"Sobolewski\", role = c(\"aut\", \"cre\"), email = \"opensource+jakub.sobolewski@appsilon.com\"), person(\"Kamil\", \"Żyła\", role = \"aut\", email = \"kamil@appsilon.com\"), person(\"Marek\", \"Rogala\", role = \"aut\", email = \"marek@appsilon.com\"), person(\"Appsilon Sp. z o.o.\", role = \"cph\", email = \"opensource@appsilon.com\") )",
+      "URL": "https://appsilon.github.io/shiny.react/, https://github.com/Appsilon/shiny.react",
+      "Description": "A toolbox for defining React component wrappers which can be used seamlessly in Shiny apps.",
+      "License": "LGPL (>= 3)",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.1",
+      "VignetteBuilder": "knitr",
+      "Imports": [
+        "glue",
+        "htmltools",
+        "jsonlite",
+        "logger",
+        "methods",
+        "purrr",
+        "rlang",
+        "shiny",
+        "stringi"
+      ],
+      "Suggests": [
+        "chromote",
+        "covr",
+        "knitr",
+        "leaflet",
+        "lintr (>= 3.0.0)",
+        "rcmdcheck",
+        "rmarkdown",
+        "shinytest2",
+        "styler",
+        "testthat",
+        "withr"
+      ],
+      "NeedsCompilation": "no",
+      "Author": "Jakub Sobolewski [aut, cre], Kamil Żyła [aut], Marek Rogala [aut], Appsilon Sp. z o.o. [cph]",
+      "Maintainer": "Jakub Sobolewski <opensource+jakub.sobolewski@appsilon.com>",
       "Repository": "RSPM"
     },
     "sourcetools": {
