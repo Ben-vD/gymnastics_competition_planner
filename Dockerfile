@@ -26,6 +26,12 @@ RUN R -e "renv::restore()"
 # Stage 2: Full dev environment (with RStudio)
 FROM rocker/rstudio:4.4.3 AS final-dev
 
+ARG USERNAME
+ARG EMAIL
+
+ENV USER_USERNAME=${USERNAME}
+ENV USER_EMAIL=${EMAIL}
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     libxml2-dev \

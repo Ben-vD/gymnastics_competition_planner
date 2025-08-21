@@ -1,3 +1,6 @@
+USER_USERNAME:=Ben_vD
+USER_EMAIL:=benvanduivd@gmail.com
+
 # === Convenience combo targets ===
 docker-build-run: docker-build-rstudio run-bash-rstudio
 docker-rebuild-run: docker-rebuild-rstudio run-bash-rstudio
@@ -5,10 +8,14 @@ docker-rebuild-run: docker-rebuild-rstudio run-bash-rstudio
 # === Full dev (RStudio) build targets ===
 docker-build-rstudio:
 	docker build -f Dockerfile --target final-dev --rm \
+		--build-arg USERNAME=$(USER_USERNAME) \
+		--build-arg EMAIL=$(USER_EMAIL) \
 		-t rhino-sem-rstudio-dev . 2>&1 | tee build.log
 
 docker-rebuild-rstudio:
 	docker build -f Dockerfile --target final-dev --rm --no-cache \
+		--build-arg USERNAME=$(USER_USERNAME) \
+		--build-arg EMAIL=$(USER_EMAIL) \
 		-t rhino-sem-rstudio-dev . 2>&1 | tee build.log
 
 run-bash-rstudio:
@@ -20,10 +27,14 @@ run-bash-rstudio:
 # === Minimal app (no RStudio) build targets ===
 docker-build-application:
 	docker build -f Dockerfile --target final-app --rm \
+		--build-arg USERNAME=$(USER_USERNAME) \
+		--build-arg EMAIL=$(USER_EMAIL) \
 		-t rhino-sem-app . 2>&1 | tee build.log
 
 docker-rebuild-application:
 	docker build -f Dockerfile --target final-app --rm --no-cache \
+		--build-arg USERNAME=$(USER_USERNAME) \
+		--build-arg EMAIL=$(USER_EMAIL) \
 		-t rhino-sem-app . 2>&1 | tee build.log
 
 run-application:
